@@ -2,7 +2,7 @@ import { TableCell } from '@material-ui/core';
 import React from 'react';
 
 
-const Provinces = ({row}) => {
+const Provinces = ({ row }) => {
 
 
 
@@ -11,11 +11,11 @@ const Provinces = ({row}) => {
             { (
                 (row.provinces).map(province => (
                     ' ' + province.nameEn
-                )) + 
+                )) +
                 (row.federal === 1 ? ' (Federal)' : '')
-            ) }
+            )}
         </TableCell>
     )
 }
- 
+
 export default Provinces;

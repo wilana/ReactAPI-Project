@@ -6,12 +6,12 @@ import axios from 'axios';
 import HolidayRow from './HolidayRow';
 import SelectProvince from './SelectProvince';
 
-
+// from material-ui for table
 const useStyles = makeStyles({
     table: {
-      minWidth: 600,
+        minWidth: 600,
     },
-  });
+});
 
 
 const HolidaysTable = () => {
@@ -41,29 +41,30 @@ const HolidaysTable = () => {
         // filter holidays using containsProvince function
         const filtered = holidays.filter(holiday => containsProvince(holiday));
 
-        if(province === "") {
+        // none selected
+        if (province === "") {
             setData(data);
         }
+        // a province selected
         else {
             setData(filtered);
-        }       
+        }
     }, [province]);
 
     // filter provinces in holiday to find if the province is contained
     const containsProvince = holiday => {
-    
         // filter provinces for just the one matching the requested province
         const provinces = holiday.provinces.filter(p => p.id === province);
-        
+
         // provinces will have length > 0 when the province is contained
         if (provinces.length > 0) return true;
         else return false;
     }
 
-    // sort holidays by type (from clicked table column head)
+    // sort holidays by type (when column header is clicked)
     const clickSort = type => {
         console.log('Sort by ' + type);
-        const sorted = [...data].sort((a,b) => compare(a[type], b[type]));
+        const sorted = [...data].sort((a, b) => compare(a[type], b[type]));
         setData(sorted);
     };
 
@@ -79,7 +80,7 @@ const HolidaysTable = () => {
         <Layout title="Canadian Holidays">
 
             <div className="d-flex justify-content-between align-items-center">
-                <SelectProvince province={province} setProvince={setProvince}/>
+                <SelectProvince province={province} setProvince={setProvince} />
                 <span className="badge badge-pill badge-secondary">Holidays Loaded: {data.length}</span>
             </div>
 
@@ -93,9 +94,9 @@ const HolidaysTable = () => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                {holidays.map((row, index) => (
-                    <HolidayRow row={row} key={index}/>
-                ))}
+                    {holidays.map((row, index) => (
+                        <HolidayRow row={row} key={index} />
+                    ))}
                 </TableBody>
             </Table>
         </Layout>

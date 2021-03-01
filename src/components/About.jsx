@@ -4,7 +4,7 @@ import Layout from './shared/Layout';
 
 // Instructions/Insight into what your application does
 const About = () => {
-    return ( 
+    return (
         <Layout title="About">
             <Container className="m-auto p-3">
                 <h5 className="text-center">To Interact With The Data:</h5>
@@ -21,7 +21,7 @@ const About = () => {
                 </Paper>
             </Container>
         </Layout>
-     );
+    );
 }
- 
+
 export default About;

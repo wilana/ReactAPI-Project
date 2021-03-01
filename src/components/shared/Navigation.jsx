@@ -1,8 +1,8 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
-    return ( 
+    return (
         <nav className="navbar fixed-top bar">
             <h3 className="text-center navbar-brand">Holidays React App</h3>
             <ul className="nav justify-content-end">
@@ -13,7 +13,7 @@ const Navigation = () => {
                 </li>
             </ul>
         </nav>
-     );
+    );
 }
- 
+
 export default Navigation;
