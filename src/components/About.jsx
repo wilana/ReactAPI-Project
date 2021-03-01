@@ -10,7 +10,7 @@ const About = () => {
                 <h5 className="text-center">To Interact With The Data:</h5>
                 <Paper className="m-5 p-3">
                     <h6>Sort</h6>
-                    <p>Click the top of the column to sort by type in ascending order.</p>
+                    <p>Click the top of the column to sort by type in both ascending and descending order.</p>
                     <p>For example, click 'Provinces/Territories' to sort by number of Provinces/Territories</p>
                 </Paper>
                 <Paper className="m-5 p-3">

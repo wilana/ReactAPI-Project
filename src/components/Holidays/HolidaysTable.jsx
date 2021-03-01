@@ -19,6 +19,8 @@ const HolidaysTable = () => {
     const [data, setData] = useState([]);
     // state variable to keep track of filtered provinces with useEffect
     const [province, setProvince] = useState("");
+    // state variable to keep track of order
+    const [order, setOrder] = useState(true);
     // listen for changes to data
     const holidays = useMemo(() => data, [data]);
 
@@ -64,7 +66,15 @@ const HolidaysTable = () => {
     // sort holidays by type (when column header is clicked)
     const clickSort = type => {
         console.log('Sort by ' + type);
-        const sorted = [...data].sort((a, b) => compare(a[type], b[type]));
+        let sorted = [...data].sort((a, b) => compare(a[type], b[type]));
+
+        if(order) {
+            sorted = sorted.reverse();
+            setOrder(false);
+        }
+        else {
+            setOrder(true);
+        }
         setData(sorted);
     };
 
