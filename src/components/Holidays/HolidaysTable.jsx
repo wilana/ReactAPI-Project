@@ -9,7 +9,7 @@ import SelectProvince from './SelectProvince';
 
 const useStyles = makeStyles({
     table: {
-      minWidth: 650,
+      minWidth: 600,
     },
   });
 
@@ -17,7 +17,7 @@ const useStyles = makeStyles({
 const HolidaysTable = () => {
     // state variable for api
     const [data, setData] = useState([]);
-    // state variable to keep track of filtered provinces
+    // state variable to keep track of filtered provinces with useEffect
     const [province, setProvince] = useState("");
     // listen for changes to data
     const holidays = useMemo(() => data, [data]);
@@ -34,7 +34,7 @@ const HolidaysTable = () => {
             });
     }, []);
 
-    // filter by province
+    // filter by province on change of the province state variable
     useEffect(() => {
         console.log('Province changed');
 
