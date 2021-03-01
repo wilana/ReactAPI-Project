@@ -14,6 +14,7 @@ const Home = () => {
                 </Container>
                 <Container className="m-5">
                 <p>It was made for COMP 2068</p>
+                <p><a href="https://github.com/wilana/ReactAPI-Project">On GitHub</a></p>
                 <p>Last Updated: February 28th, 2021</p>
                 </Container>
             </Container>

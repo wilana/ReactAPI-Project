@@ -3,12 +3,20 @@ html {
     min-height: 100%;
   }
   body {
-    margin-top: 7%;
+    margin-top: 10%;
     margin-bottom: 10%;
   }
 
+  .bar {
+    background-color: #EFD9CE;
+  }
+
+  .nav-link {
+    color: black;
+  }
   .footer {
     height: fit-content;
   }
   
+
   
