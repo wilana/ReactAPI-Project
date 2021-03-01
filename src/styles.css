@@ -1,0 +1,14 @@
+html {
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    margin-top: 7%;
+    margin-bottom: 10%;
+  }
+
+  .footer {
+    height: fit-content;
+  }
+  
+  
